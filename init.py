@@ -38,7 +38,7 @@ def main(now):
   for friend in friends:
     name = friend["name"]
     id = friend["id"]
-    description = "Spotify for the month of " + month + "— Sent by Andrew's Assistant Romulus 🤵🏻‍♂️"
+    description = "Spotify for the month of " + month + "— R🤵🏻‍♂️"
     amount = 5.00
     message = f"""Good news old sport!
 
