@@ -9,7 +9,7 @@ def main(now):
   print(f'🕘 Monthly health check running on {date} at {time}.\n')
 
   print("🔍 Verifying environment variables...")
-  numOfExpected =  7
+  numOfExpected =  5
   envVarsAreDefined = verify_env_vars(env_vars, numOfExpected)
 
   if envVarsAreDefined:
@@ -23,7 +23,7 @@ def main(now):
   telegram = Telegram(bot_token, chat_id)
 
   print("🤑 Verifying Venmo client is working...")
-  userId = venmo.get_user_id_by_username("Jordan-Mishlove")
+  userId = venmo.get_user_id_by_username(username="Alyssa-Camp-5")
 
   if userId:
     print('✅ Venmo client is working as expected.\n')

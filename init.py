@@ -15,7 +15,7 @@ def main(now):
   for var in env_vars:
     actualVars.append(get_env(var))
 
-  access_token, chat_id, bot_token, k_friend_id, c_friend_id, w_friend_id, j_friend_id = actualVars
+  access_token, chat_id, bot_token, A_friend_id, B_friend_id = actualVars
 
   month = get_month(now)
   venmo = Venmo(access_token)
@@ -23,16 +23,12 @@ def main(now):
 
   friends =[
     {
-      "name": "KRam",
-      "id": k_friend_id,
+      "name": "Abbey",
+      "id": A_friend_id,
     },
     {
-      "name": "Chrissy",
-      "id": c_friend_id,
-    },
-    {
-      "name": "Will",
-      "id": w_friend_id,
+      "name": "Alyssa",
+      "id": B_friend_id,
     },
   ]
 
@@ -42,13 +38,13 @@ def main(now):
   for friend in friends:
     name = friend["name"]
     id = friend["id"]
-    description = "Spotify for the month of " + month + "— Sent by Joe's Assistant Efron 🤵🏻‍♂️"
-    amount = 3.00
+    description = "Spotify for the month of " + month + "— Sent by Andrew's Assistant Romulus 🤵🏻‍♂️"
+    amount = 5.00
     message = f"""Good news old sport!
 
 I have successfully requested money from {name}.
 
-— Efron 🤵🏻‍♂️
+— Romulus 🤵🏻‍♂️
     """
     success = venmo.request_money(id, amount, description, telegram.send_message(message))
     if success:
